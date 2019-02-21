@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const command_1 = require("@heroku-cli/command");
-const cli_ux_1 = tslib_1.__importDefault(require("cli-ux"));
 const netrc_parser_1 = tslib_1.__importDefault(require("netrc-parser"));
 const path = tslib_1.__importStar(require("path"));
 const deps_1 = tslib_1.__importDefault(require("./deps"));
@@ -14,12 +13,6 @@ class AnalyticsCommand {
             headers: { 'user-agent': config.userAgent },
         });
     }
-    _initialAnalyticsJSON() {
-        return {
-            schema: 1,
-            commands: [],
-        };
-    }
     async record(opts) {
         await this.init();
         const plugin = opts.Command.plugin;
@@ -27,51 +20,40 @@ class AnalyticsCommand {
             debug('no plugin found for analytics');
             return;
         }
-        if (!this.user)
+        if (this.userConfig.skipAnalytics)
             return;
-        let analyticsJSON = await this._readJSON();
-        analyticsJSON.commands.push({
-            command: opts.Command.id,
-            completion: await this._acAnalytics(opts.Command.id),
-            version: this.config.version,
-            plugin: plugin.name,
-            plugin_version: plugin.version,
-            os: this.config.platform,
-            shell: this.config.shell,
-            valid: true,
-            language: 'node',
-        });
-        await this._writeJSON(analyticsJSON);
-    }
-    async submit() {
-        try {
-            await this.init();
-            let user = this.user;
-            if (!user)
-                return;
-            const local = await this._readJSON();
-            if (local.commands.length === 0)
-                return;
-            await deps_1.default.file.remove(this.analyticsPath);
-            const body = {
-                schema: local.schema,
-                commands: local.commands,
-                user,
-                install: this.userConfig.install,
-                cli: this.config.name,
-            };
-            await this.http.post(this.url, { body });
+        const analyticsData = {
+            source: 'cli',
+            event: opts.Command.id,
+            properties: {
+                command: opts.Command.id,
+                completion: await this._acAnalytics(opts.Command.id),
+                version: this.config.version,
+                plugin: plugin.name,
+                plugin_version: plugin.version,
+                os: this.config.platform,
+                shell: this.config.shell,
+                valid: true,
+                language: 'node',
+                install_id: this.userConfig.install,
+            }
+        };
+        const data = Buffer.from(JSON.stringify(analyticsData)).toString('base64');
+        if (this.authorizationToken) {
+            return this.http.get(`${this.url}?data=${data}`, { headers: { authorization: `Bearer ${this.authorizationToken}` } });
         }
-        catch (err) {
-            debug(err);
-            await deps_1.default.file.remove(this.analyticsPath).catch(err => cli_ux_1.default.warn(err));
+        else {
+            return this.http.get(`${this.url}?data=${data}`);
         }
     }
     get url() {
-        return process.env.HEROKU_ANALYTICS_URL || 'https://cli-analytics.heroku.com/record';
+        return process.env.HEROKU_ANALYTICS_URL || 'https://backboard.heroku.com/hamurai';
     }
-    get analyticsPath() {
-        return path.join(this.config.cacheDir, 'analytics.json');
+    get authorizationToken() {
+        return process.env.HEROKU_API_KEY || this.netrcToken;
+    }
+    get netrcToken() {
+        return netrc_parser_1.default.machines[command_1.vars.apiHost] && netrc_parser_1.default.machines[command_1.vars.apiHost].password;
     }
     get usingHerokuAPIKey() {
         const k = process.env.HEROKU_API_KEY;
@@ -81,24 +63,9 @@ class AnalyticsCommand {
         return netrc_parser_1.default.machines[command_1.vars.apiHost] && netrc_parser_1.default.machines[command_1.vars.apiHost].login;
     }
     get user() {
-        if (this.userConfig.skipAnalytics || this.usingHerokuAPIKey)
+        if (this.usingHerokuAPIKey)
             return;
         return this.netrcLogin;
-    }
-    async _readJSON() {
-        try {
-            let analytics = await deps_1.default.file.readJSON(this.analyticsPath);
-            analytics.commands = analytics.commands || [];
-            return analytics;
-        }
-        catch (err) {
-            if (err.code !== 'ENOENT')
-                debug(err);
-            return this._initialAnalyticsJSON();
-        }
-    }
-    async _writeJSON(analyticsJSON) {
-        return deps_1.default.file.outputJSON(this.analyticsPath, analyticsJSON);
     }
     async _acAnalytics(id) {
         if (id === 'autocomplete:options')
