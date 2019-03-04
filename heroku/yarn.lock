@@ -76,10 +76,10 @@
     lodash "^4.17.10"
     printf "0.3.0"
 
-"@heroku-cli/plugin-apps-v5@^7.21.0":
-  version "7.21.0"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-apps-v5/-/plugin-apps-v5-7.21.0.tgz#bbd21c939c4a9afa595d77498a258e50a4c6b9e3"
-  integrity sha512-59aGOi2dLTnnzTnZgRcb5EtaGW7sYtinlY4y91JReVvEpR9Kk0o4oAabK7CAlHiEVrRBonOhAgVkYxk68XEyDA==
+"@heroku-cli/plugin-apps-v5@^7.22.2":
+  version "7.22.2"
+  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-apps-v5/-/plugin-apps-v5-7.22.2.tgz#9d3220d4183b6ef61af2713251615f0127bd97da"
+  integrity sha512-D3VsXGSFi5qQReJYbfMRUN1HMyMAEStKgrPdCuu/XiW+C7TPPGSpFPQEXjT//ml/DRrQwcsAu3hEbJ3vUtbmww==
   dependencies:
     "@heroku-cli/command" "^8.2.6"
     co "^4.6.0"
@@ -260,10 +260,10 @@
     heroku-cli-util "^8.0.11"
     lodash "^4.17.11"
 
-"@heroku-cli/plugin-orgs-v5@^7.21.0":
-  version "7.21.0"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-orgs-v5/-/plugin-orgs-v5-7.21.0.tgz#f4b0256cda187d5d0a89a509b3e4e5861721e1c6"
-  integrity sha512-1wyKyS1y0/fAucpnqyMaY71WUnTJ1ntCprgAPlW/xit6pP1VPoQXSd/vM9OnXrnmsnd+MAts29pCn2ojl25cqA==
+"@heroku-cli/plugin-orgs-v5@^7.22.2":
+  version "7.22.2"
+  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-orgs-v5/-/plugin-orgs-v5-7.22.2.tgz#133dbbab857c230923acd9138cd9f805a6e28990"
+  integrity sha512-4T2ubh1zXeNX4aJZ91HJ3NrKy0z/P2wJF9boYSt2S9IQaYYLt8et3Ro77oKJCW3nYPh9HqjWjaYQTIzVZZp9QQ==
   dependencies:
     "@heroku-cli/command" "^8.2.6"
     co "^4.6.0"
@@ -291,10 +291,10 @@
     strip-eof "^1.0.0"
     tunnel-ssh "^4.1.4"
 
-"@heroku-cli/plugin-pipelines-v5@^7.21.0":
-  version "7.21.0"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-pipelines-v5/-/plugin-pipelines-v5-7.21.0.tgz#9f0028cca1bbded1e505d9a0da471c10ad116b1b"
-  integrity sha512-aRLDvpkY9LFmE69VjqcAIzzRvD2AOAwUYnlT1EAPezUDAom0t6cRi52c6SZxhxT+Mb/NchCTK1NdNm09803WVA==
+"@heroku-cli/plugin-pipelines-v5@^7.22.2":
+  version "7.22.2"
+  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-pipelines-v5/-/plugin-pipelines-v5-7.22.2.tgz#dd95769b063c45f5091aa3e473a3906be27e4980"
+  integrity sha512-+R4px9cP64l/zn40OO6ao/D4IYR2eh5BJqd1n0ss2tJHco58XYhNPOF0dfME4BZD9gtOJKuktzV8lzftgGBYuQ==
   dependencies:
     "@heroku-cli/command" "^8.2.6"
     bluebird "^3.5.3"
@@ -368,10 +368,10 @@
     heroku-cli-util "^8.0.11"
     shellwords "^0.1.1"
 
-"@heroku-cli/plugin-spaces@^7.22.0":
-  version "7.22.0"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-spaces/-/plugin-spaces-7.22.0.tgz#f4522f0b2fb36c24233a073bb5cf89f5a8d5a7ce"
-  integrity sha512-PrjuVPPIBIFct4E7Mb6PIdk3okM6+bENOx1lmL6h3VdhzMyyQk139RF1GBQF1wQO4spfHkfQjf7oo7l9wKBdFA==
+"@heroku-cli/plugin-spaces@^7.22.2":
+  version "7.22.2"
+  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-spaces/-/plugin-spaces-7.22.2.tgz#3c3a3ce1926dd2ca209c295df67173cc11e2a6d4"
+  integrity sha512-Tg7cxD9SKdQSUb/F1tQFjfqc/Xk4Tfc8ISe5Vwn6RIS+qZG/bY0qkoC1ewVn1ndN8eCixUZ0ajSmOXyj5J2mRQ==
   dependencies:
     "@heroku-cli/command" "^8.2.6"
     "@heroku-cli/notifications" "^1.2.2"
