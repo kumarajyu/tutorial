@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
 
+  get 'rooms/show'
+
   get 'password_resets/new'
 
   get 'password_resets/edit'
