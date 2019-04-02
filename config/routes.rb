@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
 
-  get 'rooms/show'
+  get '/chat', to: 'rooms#show'
 
   get 'password_resets/new'
 
