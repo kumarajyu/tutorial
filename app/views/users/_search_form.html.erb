@@ -1,0 +1,10 @@
+<%= search_form_for @q do |f| %>
+  <%= f.label :name_cont, 'User Search' %>
+  <div class="input-group">
+    <%= f.text_field :name_cont, placeholder: "Enter username...",
+                      class: 'form-control' %>
+    <span class="input-group-btn">
+     <%= f.submit 'Go', class: "btn btn-primary" %>
+    </span>
+  </div>
+<% end %>

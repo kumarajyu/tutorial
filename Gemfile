@@ -19,7 +19,7 @@ gem 'jbuilder',     '2.7.0'
 gem 'pry-rails'
 gem 'redis'
 gem 'redis-rails'
-
+gem 'ransack', '1.8.4'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

@@ -7,4 +7,23 @@
   <%= render @users %>
 </ul>
 
+<div class="row">
+  <div class="search_form">
+    <%= render 'users/search_form' %>
+  </div>
+</div>
+
+<%= will_paginate %>
+
+<% unless @users.empty? %>
+  <ul class="users">
+    <%= render @users %>
+  </ul>
+<% else %>
+  <p>
+    Couldn't find any user.<br>
+    Please check username you are looking for.
+  </p>
+<% end %>
+
 <%= will_paginate %>

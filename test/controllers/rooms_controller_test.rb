@@ -2,7 +2,7 @@ require 'test_helper'
 
 class RoomsControllerTest < ActionDispatch::IntegrationTest
   test "should get show" do
-    get rooms_show_url
+    get chat_url
     assert_response :success
   end
 
