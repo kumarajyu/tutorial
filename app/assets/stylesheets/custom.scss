@@ -66,27 +66,24 @@ p {
   background-color: red;
 }
 
-.btn-square-little-rich {
+.btn-square-pop {
   font-size: 3em;
   position: relative;
   display: inline-block;
   padding: 0.25em 0.5em;
   text-decoration: none;
   color: #FFF;
-  background: #03A9F4;/*色*/
-  border: solid 1px #0f9ada;/*線色*/
-  border-radius: 4px;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
-  text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+  background: #fd9535;/*背景色*/
+  border-bottom: solid 2px #d27d00;/*少し濃い目の色に*/
+  border-radius: 4px;/*角の丸み*/
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  font-weight: bold;
 }
 
-.btn-square-little-rich:active {
-  /*押したとき*/
-  border: solid 1px #03A9F4;
-  box-shadow: none;
-  text-shadow: none;
+.btn-square-pop:active {
+  border-bottom: solid 2px #fd9535;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
 }
-
 
 /* header */
 
@@ -99,10 +96,15 @@ p {
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #6182ca, 0px 2px 0px #4f6aa7, 0px 3px 0px #5470ad;
   &:hover {
     color: white;
     text-decoration: none;
   }
+  &:active {
+  top: 4px;
+  text-shadow: none;
+}
 }
 
 /* footer */
