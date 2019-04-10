@@ -192,14 +192,14 @@
     "@oclif/config" "^1.12.10"
     tslib "^1.9.3"
 
-"@heroku-cli/plugin-ci-v5@^7.22.7":
-  version "7.22.7"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-ci-v5/-/plugin-ci-v5-7.22.7.tgz#829332d1d993c39c8bf145b49dd1fbd5df794e77"
-  integrity sha512-er7IlWWROZAPRAGFZIV2f0q0qjfCYbKbbWjgU6Z08H5NNaqrOTxlsqt2U5hx0mBbkR/Ha71YwRKYNvMoMADfUA==
+"@heroku-cli/plugin-ci-v5@^7.22.8":
+  version "7.22.8"
+  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-ci-v5/-/plugin-ci-v5-7.22.8.tgz#8b5e77c30662e3a60412189bbc2d3d66de284f08"
+  integrity sha512-ElLLf7f4H06thq4732/wnfRD7QgsCOL8kZZZBl2m/uAdoUzUbjU4mNKt6I/XI49LYWbxXYzW/EPuK2ufmOw8ZA==
   dependencies:
     "@heroku-cli/command" "^8.2.10"
     "@heroku-cli/plugin-pipelines" "^2.5.8"
-    "@heroku-cli/plugin-run-v5" "^7.22.7"
+    "@heroku-cli/plugin-run-v5" "^7.22.8"
     ansi-escapes "3.2.0"
     bluebird "^3.5.3"
     co "^4.6.0"
@@ -212,10 +212,10 @@
     socket.io-client "^2.2.0"
     temp "^0.8.3"
 
-"@heroku-cli/plugin-ci@^7.22.7":
-  version "7.22.7"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-ci/-/plugin-ci-7.22.7.tgz#295cc64152edbd86356eadffa2e8c71517a786bf"
-  integrity sha512-SKxE7Y7qSu5qzoad24WycZRPSxYfmwos0I/W1RnH16BmmY/Buh6Rc1lJgBjh4geNCEZkv3ZmSALUPhFzhShxRw==
+"@heroku-cli/plugin-ci@^7.22.8":
+  version "7.22.8"
+  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-ci/-/plugin-ci-7.22.8.tgz#688e5fb8a9b6528fac12afddd8a454cda862e8c9"
+  integrity sha512-sQEMz04qdSyPoCbsynkxkLfntWRsEXYdzW6T90ainpN9CDdusMlmDbPBu57cGrv3UaXuHBb06GY0tGcwXyAatg==
   dependencies:
     "@heroku-cli/color" "^1.1.14"
     "@heroku-cli/command" "^8.2.10"
@@ -375,19 +375,19 @@
     cli-ux "^4.9.3"
     lodash "^4.17.11"
 
-"@heroku-cli/plugin-redis-v5@^7.22.5":
-  version "7.22.5"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-redis-v5/-/plugin-redis-v5-7.22.5.tgz#f193363c498cb365d2a2e78c5e2c109ce6faf612"
-  integrity sha512-be079IPT++ytIlnltAXYoMchKB+Uif0P8+E5XGD2LHIynPp64oTQJN3+Nz+/vN7qK1INd74tjmhCkS9j594K+g==
+"@heroku-cli/plugin-redis-v5@^7.22.8":
+  version "7.22.8"
+  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-redis-v5/-/plugin-redis-v5-7.22.8.tgz#539273fc2df402725c5f6a312871e1ba30441347"
+  integrity sha512-eooFNK3TzNIIDhFu9BIdcZ0XFYyHd0Hig/oh4EVPdDu5jsQjsAhcmnHNZpzIleWTwn/tpvsNZIXvRibr/5N0Wg==
   dependencies:
     heroku-cli-util "^8.0.11"
     redis-parser "^3.0.0"
     ssh2 "^0.6.1"
 
-"@heroku-cli/plugin-run-v5@^7.22.7":
-  version "7.22.7"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-run-v5/-/plugin-run-v5-7.22.7.tgz#367a33bb9ba8865d1a6a7d7f9c108bc3957b376d"
-  integrity sha512-dsinpjHIFSEckmIX7Ul4oGJR8jmQX9Ulx4OoXxDsUDcTl5bA70DsD8nqpkASIpOVuLFjuR8OuPakqvGswqip4Q==
+"@heroku-cli/plugin-run-v5@^7.22.8":
+  version "7.22.8"
+  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-run-v5/-/plugin-run-v5-7.22.8.tgz#a64bbb752752098a42e21297f8eb2af8e4a9c1a7"
+  integrity sha512-JuVkvbzgCLqf3yJ9peza4lCrkfrQ6yutTvfg5ZEfixs0S9iH+PiBY7vIyTbAJ68I0Cby+1Z9u6bUEZSNuAWyzw==
   dependencies:
     "@heroku-cli/color" "^1.1.14"
     "@heroku-cli/command" "^8.2.10"

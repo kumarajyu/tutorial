@@ -20,6 +20,8 @@ gem 'pry-rails'
 gem 'redis'
 gem 'redis-rails'
 gem 'ransack', '1.8.4'
+#日本語化
+gem 'rails-i18n', '~> 5.1'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

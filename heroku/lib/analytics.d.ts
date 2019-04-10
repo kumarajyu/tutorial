@@ -4,12 +4,29 @@ export interface RecordOpts {
     Command: Config.Command.Class;
     argv: string[];
 }
+export interface AnalyticsInterface {
+    source: string;
+    event: string;
+    properties: {
+        cli: string;
+        command: string;
+        completion: number;
+        version: string;
+        plugin: string;
+        plugin_version: string;
+        os: string;
+        shell: string;
+        valid: boolean;
+        language: string;
+        install_id: string;
+    };
+}
 export default class AnalyticsCommand {
     config: Config.IConfig;
     userConfig: typeof deps.UserConfig.prototype;
     http: typeof deps.HTTP;
     constructor(config: Config.IConfig);
-    record(opts: RecordOpts): Promise<import("http-call").HTTP<{}> | undefined>;
+    record(opts: RecordOpts): Promise<any>;
     readonly url: string;
     readonly authorizationToken: string | undefined;
     readonly netrcToken: string | undefined;
