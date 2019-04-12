@@ -8,9 +8,11 @@ Rails.application.routes.draw do
   get 'password_resets/edit'
 
   get 'sessions/new'
+  
+  get '/pictures',  to: 'pictures#new'
 
   root 'static_pages#home'
-  get '/pictures',  to: 'pictures#new'
+  
   get  '/help',    to: 'static_pages#help'
   get  '/about',   to: 'static_pages#about'
   get  '/contact', to: 'static_pages#contact'
