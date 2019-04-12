@@ -1,0 +1,110 @@
+// Place all the styles related to the pictures controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+canvas#draw-area {
+  border: solid 1px black;
+}
+
+#canvas {
+  margin-right: 30px;
+  float: left;
+}
+
+.panels {
+  margin-bottom: 10px;
+  float: left;
+}
+
+.panel {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#preview-pen {
+  width:  100px;
+  height: 100px;
+  background-color: white;
+  border: solid 1px black;
+  float: left;
+}
+#pen {
+  width: 70px;
+  height: 10px;
+  background-color: black;
+  margin-left: 15px;
+  margin-top: 80px;
+}
+
+#pen-width-slider {
+  -webkit-appearance: slider-vertical;
+  height: 80px;
+  width:  20px;
+  margin: 10px 0 10px 0;
+}
+
+#show-pen-width {
+}
+
+#color-choice {
+  margin-top: 10px;
+  width:  60px;
+  height: 60px;
+}
+
+.controll-button {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: solid 1px black;
+}
+.button-over {
+  background-color: #eeeeee;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.pict_thumbnail{
+  width:  100px;
+  height: 100px;
+  border: solid 2px #dddddd;
+  margin: 10px 10px 10px 0;
+  cursor: pointer;
+}
+.pict_thumbnail-over{
+  border: solid 2px #333333;
+}
+
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.blue {
+  color: blue;
+}
+.alpha {
+  color: black;
+}
+
+.name {
+  float: left;
+  display: block;
+  font-size: 40pt;
+  height: 44pt;
+  line-height: 44pt;
+  width: 100%;
+  background-color: #aaa;
+}
+
+.navbar .nav.pull-right {
+  margin-top: -(46pt + 40px);
+}
+
+@media (max-width: 979px) {
+  .navbar .nav.pull-right {
+    margin-top: 44pt + 10px;
+  }
+}

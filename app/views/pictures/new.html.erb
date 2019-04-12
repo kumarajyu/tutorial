@@ -1,0 +1,42 @@
+<div id="view">
+  <div id="canvas">
+    <canvas id="draw-area" width="670" height="450"></canvas>
+  </div>
+</div>
+
+<div class="panels">
+  <div class="panel">
+    <button id="clear-button" class="btn">消去</button>
+    <button id="undo-button" class="btn">Undo</button>
+    <button id="redo-button" class="btn">Redo</button>
+    <button id="save-button" class="btn">保存</button>
+    <button id="download-button" class="btn">Download</button>
+  </div>
+
+  <div class="panel">
+    <div id="preview-pen">
+      <div id="pen"></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panels" style="width: 60px;">
+      <%= range_field_tag "pen-width-slider", 10, min: 1, max: 80, step: 1 %>
+      <span id="show-pen-width">10</span>px
+    </div>
+    <input type="color" value="#000000" id="color-choice"></input>
+  </div>
+
+  <div class="panels">
+    <div class="panel">
+      <input id="upload" name="upload" type="file" value="File Upload">
+      <p>
+      (デスクトップから画像を drop でも可能)
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div id="pictures"></div>
