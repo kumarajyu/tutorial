@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :microposts,          only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]
+  resources :pictures, only: [:create]
   
   # Serve websocket cable requests in-process
   mount ActionCable.server => '/cable'
