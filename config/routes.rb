@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
-
+  root 'static_pages#home'
+  
   get '/chat', to: 'rooms#show'
 
   get 'password_resets/new'
@@ -9,13 +10,12 @@ Rails.application.routes.draw do
 
   get 'sessions/new'
   
-  get '/pictures',  to: 'pictures#new'
-
-  root 'static_pages#home'
+  
   
   get  '/help',    to: 'static_pages#help'
   get  '/about',   to: 'static_pages#about'
   get  '/contact', to: 'static_pages#contact'
+  get '/pictures',  to: 'pictures#new'
   get '/signup', to: 'users#new'
   post '/signup',  to: 'users#create'
   get    '/login',   to: 'sessions#new'

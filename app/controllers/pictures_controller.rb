@@ -18,4 +18,5 @@ class PicturesController < ApplicationController
 
     render :nothing => true
   end
+  
 end
