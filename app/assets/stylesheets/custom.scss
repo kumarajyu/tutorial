@@ -16,12 +16,14 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 100px;
-  
+  background-image: url(/images/黒板.png);
+  height: 700px;
+  background-size: cover;
 }
 
-.container {
-  background-image: url("/images/黒板.png");
-  background-size: cover;
+#pict {
+  background-color: white;
+  padding: 10px 10px;
 }
 
 section {
