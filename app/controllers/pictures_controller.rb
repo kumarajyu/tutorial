@@ -1,4 +1,5 @@
 class PicturesController < ApplicationController
+  protect_from_forgery :except => [:create, :index]
   
   def new
   end
