@@ -3,10 +3,10 @@
     <%= link_to "sample app", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "ホーム",  root_path %></li>
-        <li><%= link_to "ヘルプ",   help_path %></li>
+        <li class><%= link_to "ホーム",  root_path, id: "header-menu" %></li>
+        <li><%= link_to "ヘルプ",   help_path, id: "header-menu" %></li>
         <% if logged_in? %>
-          <li><%= link_to "ユーザー", users_path %></li>
+          <li><%= link_to "ユーザー", users_path, "header-menu" %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               Account <b class="caret"></b>
@@ -16,12 +16,12 @@
               <li><%= link_to "セッティング", edit_user_path(current_user) %></li>
               <li class="divider"></li>
               <li>
-                <%= link_to "ログアウト", logout_path, method: :delete %>
+                <%= link_to "ログアウト", logout_path, method: :delete , id: "header-menu" %>
               </li>
             </ul>
           </li>
         <% else %>
-          <li><%= link_to "ログイン", login_path %></li>
+          <li><%= link_to "ログイン", login_path, id: "header-menu" %></li>
         <% end %>
       </ul>
     </nav>
