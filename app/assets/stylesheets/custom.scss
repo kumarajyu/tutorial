@@ -21,11 +21,6 @@ body {
   background-size: cover;
 }
 
-#pict {
-  background-color: white;
-  padding: 10px 10px;
-}
-
 section {
   overflow: auto;
 }
@@ -69,6 +64,11 @@ p {
   font-size: 1.1em;
   line-height: 1.7em;
   color: white;
+}
+
+label {
+  color: white;
+  font-size: 15px;
 }
 
 /* extend bootstrap */
@@ -382,3 +382,40 @@ span.picture {
   }
 }
 
+/* pictures */
+
+#pict {
+  background-color: white;
+  padding: 10px 10px;
+}
+
+.list {
+  padding-bottom: 10px;
+}
+
+/* chat */
+
+#messages {
+    position: relative;
+    margin: 2em 0;
+    padding: 25px 10px 7px;
+    border: solid 2px #FFC107;
+}
+#messages .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -2px;
+    left: -2px;
+    padding: 0 9px;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    font-size: 17px;
+    background: #FFC107;
+    color: #ffffff;
+    font-weight: bold;
+}
+#messages p {
+    margin: 0; 
+    padding: 0;
+}
