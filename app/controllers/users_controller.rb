@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @users = User.where(activated: true).paginate(page: params[:page])
     if params[:q] && params[:q].reject { |key, value| value.blank? }.present?
       @q = User.ransack(search_params, activated_true: true)
-      @title = "Serach Result"
+      @title = "検索結果"
     else
       @q = User.ransack(activated_true: true)
       @title = "全てのユーザー"
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       @user.send_activation_email
-      flash[:info] = "メールを送信しましたので、ご確認ください"
+      flash[:info] = "メールを送信しましたので、そちらより本登録にお進みください"
       redirect_to root_url
     else
       render 'new'
@@ -51,19 +51,19 @@ class UsersController < ApplicationController
   
   def destroy
     User.find(params[:id]).destroy
-    flash[:success] = "User deleted"
+    flash[:success] = "削除しました"
     redirect_to users_url
   end
   
   def following
-    @title = "Following"
+    @title = "フォロー中"
     @user  = User.find(params[:id])
     @users = @user.following.paginate(page: params[:page])
     render 'show_follow'
   end
 
   def followers
-    @title = "Followers"
+    @title = "フォロワー"
     @user  = User.find(params[:id])
     @users = @user.followers.paginate(page: params[:page])
     render 'show_follow'

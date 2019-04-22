@@ -7,6 +7,9 @@
         <li><%= link_to "ヘルプ",   help_path, id: "header-menu" %></li>
         <% if logged_in? %>
           <li><%= link_to "ユーザー", users_path, id: "header-menu" %></li>
+          <li><%= link_to "チャット", chat_path, id: "header-menu" %></li>
+          <li><%= link_to "お絵かきする", pictures_path, id: "header-menu" %></li>
+          <li><%= link_to "絵を見る", pictures_list_path, id: "header-menu" %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               アカウント <b class="caret"></b>
