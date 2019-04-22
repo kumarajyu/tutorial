@@ -34,7 +34,7 @@ Rails.application.routes.draw do
   resources :microposts,          only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]
   resources :pictures, only: [:create, :index, :destroy]
- 
+  resources :messages, only: [:destroy]
   
   # Serve websocket cable requests in-process
   mount ActionCable.server => '/cable'

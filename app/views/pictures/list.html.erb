@@ -2,7 +2,7 @@
 <% @response.split(",").each do |id| %>
 <div class = list>
   <img src="/images/<%=id%>.png" style="border:solid black 1px;"></img>
-  <td><%= link_to '削除する', id, method: :delete, data: { confirm: '⚠本当に削除してよろしいですか?' } %></td>
+  <!-- <td><%= link_to '削除する', id, method: :delete, data: { confirm: '⚠本当に削除してよろしいですか?' } %></td> -->
 </div>
 <% end %>
 </div>
