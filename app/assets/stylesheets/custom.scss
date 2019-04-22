@@ -399,7 +399,8 @@ span.picture {
     position: relative;
     margin: 2em 0;
     padding: 25px 10px 7px;
-    border: solid 2px #FFC107;
+    border: solid 2px #FFCA28;
+    background-color: white;
 }
 #messages .box-title {
     position: absolute;
@@ -410,12 +411,15 @@ span.picture {
     height: 25px;
     line-height: 25px;
     vertical-align: middle;
-    font-size: 17px;
-    background: #FFC107;
-    color: #ffffff;
+    font-size: 10px;
+    background: #FFCA28;
+    color: black;
     font-weight: bold;
 }
 #messages p {
     margin: 0; 
     padding: 0;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
 }

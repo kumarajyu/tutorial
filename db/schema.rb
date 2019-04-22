@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190412131601) do
+ActiveRecord::Schema.define(version: 20190422073943) do
 
   create_table "messages", force: :cascade do |t|
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "from_id"
   end
 
   create_table "microposts", force: :cascade do |t|
