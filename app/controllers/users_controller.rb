@@ -11,7 +11,7 @@ class UsersController < ApplicationController
       @title = "Serach Result"
     else
       @q = User.ransack(activated_true: true)
-      @title = "All users"
+      @title = "全てのユーザー"
     end
     @users = @q.result.paginate(page: params[:page])
   end
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       @user.send_activation_email
-      flash[:info] = "Please check your email to activate your account."
+      flash[:info] = "メールを送信しましたので、ご確認ください"
       redirect_to root_url
     else
       render 'new'
@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   
   def update
     if @user.update_attributes(user_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = "プロフィールを変更しました"
       redirect_to @user
     else
       render 'edit'
