@@ -10,7 +10,7 @@
     <button id="clear-button" class="btn">消す</button>
     <button id="undo-button" class="btn">１回もどる</button>
     <button id="redo-button" class="btn">すすむ</button>
-    <button id="save-button" class="btn">保存</button>
+    <button id="save-button" class="btn">保存 (※絵を見るへ)</button>
     <button id="download-button" class="btn">ダウンロード</button>
   </div>
 
@@ -19,7 +19,7 @@
       <div id="pen"></div>
     </div>
   </div>
-
+  
   <div class="panel">
     <div class="panels" style="width: 60px;">
       <%= range_field_tag "pen-width-slider", 10, min: 1, max: 80, step: 1 %>
@@ -27,7 +27,7 @@
     </div>
     <input type="color" value="#000000" id="color-choice"></input>
   </div>
-
+↑↑クリックして色を変える
   <div class="panels">
     <div class="panel">
       <input id="upload" name="upload" type="file" value="File Upload">
@@ -38,8 +38,9 @@
   </div>
 </div>
 
-※書けない場合は一度ページをリロードしてお使いください※
-
+<p1>
+  ※書けない場合は一度ページをリロードしてお使いください※
+</p1>
 <div class="clearfix"></div>
 
 <div id="pictures"></div>
