@@ -2,10 +2,10 @@ Rails.application.routes.draw do
   
   root 'static_pages#home'
   
-  get '/chat', to: 'rooms#show'
-
+  get    '/chat', to: 'rooms#show'
+  post '/chat/destroy' => 'rooms#destroy'
+  
   get 'password_resets/new'
-
   get 'password_resets/edit'
 
   get 'sessions/new'
@@ -34,7 +34,6 @@ Rails.application.routes.draw do
   resources :microposts,          only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]
   resources :pictures, only: [:create, :index, :destroy]
-  resources :messages, only: [:destroy]
   
   # Serve websocket cable requests in-process
   mount ActionCable.server => '/cable'

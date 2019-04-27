@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-  </head>
-  <body>
-    <h7>『じゆうちょう』</h7>
+<h7>『じゆうちょう』</h7>
 
-      <p1>はじめまして、 <%= @user.name %>,</p1>
+<p1>はじめまして、 <%= @user.name %>,</p1>
 
-      <p1>
-        ようこそ『じゆうちょう』へ! リンクをクリックしてアカウントを本登録してください:
-      </p1>
+<p1>
+  ようこそ『じゆうちょう』へ! リンクをクリックしてアカウントを本登録してください:
+</p1>
 
 <%= link_to "アカウント登録", edit_account_activation_url(@user.activation_token,
                                                     email: @user.email) %>
-  </body>
-</html>
