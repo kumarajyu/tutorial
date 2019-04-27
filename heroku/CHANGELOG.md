@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [7.22.10](https://github.com/heroku/cli/compare/v7.22.9...v7.22.10) (2019-04-19)
+## [7.24.1](https://github.com/heroku/cli/compare/v7.24.0...v7.24.1) (2019-04-25)
+
+
+### Bug Fixes
+
+* downgrade node to 11.14.0 ([0fe519d](https://github.com/heroku/cli/commit/0fe519d))
+
+
+
+
+
+# [7.24.0](https://github.com/heroku/cli/compare/v7.23.0...v7.24.0) (2019-04-25)
 
 **Note:** Version bump only for package heroku
 
