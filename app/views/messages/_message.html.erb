@@ -2,7 +2,7 @@
   <p><%= message.content %></p>
   <%= form_tag("/chat/destroy") do %>
       <%= hidden_field_tag :id, message.id %>
-      <input type="submit" value="↑削除">
+      <input id="submit_button" type="submit" value="↑削除">
     <% end %>
 </div>
 

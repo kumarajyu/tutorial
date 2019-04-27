@@ -45,6 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3em;
+  font-weight: 900;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
@@ -53,11 +54,12 @@ h1 {
 
 h2 {
   font-size: 1.2em;
+  font-weight: bold;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: white;
+  color: black;
 }
 
 h7 {
@@ -178,7 +180,7 @@ label {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
+  border-top: 1px solid white;
   color: white;
   a {
     color: white;
@@ -191,6 +193,7 @@ footer {
   }
   ul {
     float: right;
+    font-size: 1.5em;
     list-style: none;
     li {
       float: left;
@@ -416,12 +419,18 @@ span.picture {
 
 #messages p {
    position: relative;
-    margin: 1em 1em;
-    padding: 15px 5px 7px;
+    margin: 0 5px;
+    padding: 5px 5px;
     border: solid 5px #FFCA28;
     background-color: white;
     border-radius: 10px;/*角の丸み*/
     color: black;
     font-size: 25px;
     font-weight: bold;
+}
+
+input#submit_button {
+    // 幅と高さを指定
+    width: 150px;
+    height: 50px;
 }
