@@ -14,6 +14,10 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 
+:link {
+  :hover: red;
+}
+
 body {
   padding-top: 100px;
   background-image: url(/images/黒板.png);
