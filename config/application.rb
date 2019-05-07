@@ -19,6 +19,6 @@ module Sample_App
   # 認証トークンをremoteフォームに埋め込む
     config.action_view.embed_authenticity_token_in_remote_forms = true
     config.i18n.default_locale = :ja
-    config.i18n.load_path += Dir[Rails.root.join('path', 'to', 'ymlfile', '*.{yml}').to_s]
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml').to_s]
   end
 end
